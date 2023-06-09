@@ -1,6 +1,7 @@
-import Link from 'next/link';
+//next에서 제공하는 Link를 import해서 사용할수 있다.
+import Link from "next/link";
 
-const products = ['shirt', 'pants', 'skirt', 'shoes'];
+const products = ["shirt", "pants", "skirt", "shoes"];
 
 export default function ProductsPage() {
   return (
