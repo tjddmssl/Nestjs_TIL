@@ -11,7 +11,7 @@ export type Product = {
 };
 
 export async function getProducts(): Promise<Product[]> {
-  //join(...paths: string[]): string;
+  //path.join(...paths) 여러 인자를 넣으면 하나의 경로로 합쳐준다.
   //process.cwd() method returns the current working directory of the Node.js process.
   //파일경로를 지정해줌
   const filePath = path.join(process.cwd(), "data", "products.json");

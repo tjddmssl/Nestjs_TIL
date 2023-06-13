@@ -1,7 +1,8 @@
 import { getProducts, Product } from "@/service/products";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-//예전버전
+//예전 버전의 API라우트
+//최신버전은 app에서 api를 사용할수 있다.
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Product[]>
