@@ -2,11 +2,12 @@
  * 폴터안에 폴더 만들때 [원하는 키워드]넣어서 만들면 된다. 보통 [slug]를 많이 쓴다.
  */
 
+import { log } from "console";
 import { notFound } from "next/navigation";
 
 type Props = {
   params: {
-    //폴더 이름
+    //폴더 이름 // {slug: 'pants'} { slug: 'women' }
     slug: string;
   };
 };
@@ -20,6 +21,7 @@ export function generateMetadata({ params }: Props) {
 
 //products파일안에 즉 이 경로안에 알수 없는 경로가 들어오면 not-found.tsx를 호출한다.
 export default function PantsPage({ params }: Props) {
+  console.log(params);
   if (params.slug === "nothing") {
     //slug가 없다면 not-found.tsx를 호출
     notFound();
